@@ -50,6 +50,10 @@ ol {
 
 /****** GENERAL STYLE ******/
 
+html {
+    scroll-behavior: smooth;
+}
+
 .menu-open {
     overflow: hidden;
 }
@@ -62,6 +66,11 @@ body {
 h3 {
     text-align: center;
     font-size: clamp(2rem, 5vw, 3rem);
+}
+
+#top,
+section {
+    scroll-margin-top: 96px;
 }
 
 /****** HEADER ******/
@@ -77,11 +86,16 @@ header {
     background-color: var(--blue);
 }
 
-header h1 {
+#title {
     font-size: 1.5rem;
 }
 
+#title a {
+    text-decoration: none;
+}
+
 header,
+#title a,
 #menu a {
     color: var(--white-bg);
 }
@@ -286,6 +300,7 @@ nav {
     padding: 1rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     /* #28  */
+    text-decoration: none;
     transition: 0.1s;
 }
 
@@ -305,8 +320,8 @@ nav {
 .green {
     background-color: transparent;
     border: 2px solid var(--green);
-    color: var(--green);
     backdrop-filter: blur(30px);
+    color: var(--green);
 }
 
 .btn img {
@@ -314,7 +329,7 @@ nav {
 }
 
 .btn p {
-    font-weight: bold;
+    font-weight: 700;
     font-size: clamp(1rem, 1.2vw + 0.8rem, 1.3rem);
 }
 
