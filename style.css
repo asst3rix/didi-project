@@ -60,7 +60,7 @@ body {
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
 }
 
 /****** HEADER ******/
@@ -338,18 +338,39 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 3rem;
-    padding: 3rem 5rem 5rem 5rem;
+    padding: 3rem;
     background-color: var(--white);
 }
 
+#services h3 {
+    text-align: center;
+}
+
 #services p {
-    font-size: 1.1rem;
+    font-size:  clamp(1rem, 3vw, 1.1rem);
     text-align: justify;
 }
 
 #services-types {
     display: flex;
-    gap: 5rem;
+    gap: 3rem clamp(2rem, 4vw, 5rem);
+}
+
+@media (width < 1200px) {
+    #services {
+        padding-inline: 5vw;
+    }
+
+    #services-types {
+        flex-direction: column;
+        width: 70vw;
+    }
+}
+
+@media (width < 750px) {
+    #services-types {
+        width: 100%;
+    }
 }
 
 .services-types-card {
@@ -376,7 +397,7 @@ nav {
 }
 
 .services-types-card h4 {
-    font-size: 1.9rem;
+    font-size: clamp(1.5rem, 5vw, 1.9rem);
     text-align: center;
 }
 
