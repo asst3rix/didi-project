@@ -578,13 +578,10 @@ nav {
 
 #contact-container {
     display: flex;
+    flex-direction: column;
     gap: 2rem;
     font-size: 1.1rem;
-}
-
-#contact-container>div {
-    flex: 1;
-    padding: 1.5rem;
+    max-width: 75rem;
 }
 
 #contact-txt {
@@ -592,11 +589,14 @@ nav {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-    text-align: justify;
 }
 
 #contact-txt h4 {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+}
+
+#contact p {
+    font-size: clamp(1rem, 3vw, 1.1rem);
 }
 
 #contact-txt ul {
@@ -607,7 +607,7 @@ nav {
 #contact-txt li {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1.5rem;
     padding: 1rem;
 }
 
@@ -624,6 +624,7 @@ nav {
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
     /* #70 */
     border-radius: 5px;
+    padding: 1.5rem;
 }
 
 #contact-form {
@@ -641,6 +642,7 @@ nav {
     font-size: 1rem;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
     /* #65 */
+    min-width: 0;
 }
 
 select:required:invalid,
@@ -674,7 +676,6 @@ option {
     border: 1px solid var(--yellow);
     color: var(--white);
     font-style: normal;
-    margin-inline: 15rem;
     font-size: 1.1rem;
     font-weight: 500;
     transition: 0.1s;
@@ -686,6 +687,22 @@ option {
     color: var(--blue);
     border: 1px solid var(--blue);
     transition: 0.3s;
+}
+
+@media (width < 1000px) {
+    #contact {
+        padding-inline: 5vw;;
+    }
+}
+
+@media (width < 800px) {
+    #contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    #contact-form>* {
+        grid-column: 1 / 1;
+    }
 }
 
 /****** FOOTER ******/
