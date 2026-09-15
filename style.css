@@ -59,7 +59,7 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--white-bg);
 }
 
@@ -70,7 +70,7 @@ h3 {
 
 #top,
 section {
-    scroll-margin-top: 96px;
+    scroll-margin-top: 85px;
 }
 
 /****** HEADER ******/
@@ -82,22 +82,18 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-block: 2rem;
+    padding-block: 1.3rem;
     background-color: var(--blue);
 }
 
 #title {
-    font-size: 1.5rem;
-}
-
-#title a {
-    text-decoration: none;
+    width: clamp(15rem, 30vw, 20rem);
+    display: block;
 }
 
 header,
-#title a,
 #menu a {
-    color: var(--white-bg);
+    color: var(--white);
 }
 
 nav {
