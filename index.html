@@ -33,14 +33,29 @@
     </header>
     <main>
         <section id="hero">
-            <div class="hero-section" id="one">
-                <a href="index.html#contact"><img src="images/icons/devis.png" alt=""><p>Demander un devis commercial</p></a>
+            <div class="hero-column-container" id="sale">
+                <div class="hero-column-title">
+                    <h1>Vente & Location</h1>
+                    <a class="blue" href="index.html#contact"><img src="images/icons/devis.png" alt="">
+                        <p>Demander un devis</p>
+                    </a>
+                </div>
             </div>
-            <div class="hero-section" id="two">
-                <a href="index.html#contact"><img src="images/icons/reparation.png" alt=""><p>Demander un dépannage</p></a>
+            <div class="hero-column-container" id="repair">
+                <div class="hero-column-title">
+                    <h1>Dépannage & Réparation</h1>
+                    <a class="yellow" href="index.html#contact"><img src="images/icons/reparation.png" alt="">
+                        <p>Demander un dépannage</p>
+                    </a>
+                </div>
             </div>
-            <div class="hero-section" id="three">
-                <a href="index.html#contact"><img src="images/icons/occasion.png" alt=""><p>Occasions disponibles</p></a>
+            <div class="hero-column-container" id="secondhand">
+                <div class="hero-column-title">
+                    <h1>Reconditionné & Seconde vie</h1>
+                    <a class="green" href="index.html#contact"><img src="images/icons/occasion.png" alt="">
+                        <p>Occasions disponibles</p>
+                    </a>
+                </div>
             </div>
         </section>
         <section id="services">
@@ -49,7 +64,7 @@
                 <div class="services-types-card">
                     <img src="images/vente.jpg" alt="" class="services-types-card-img">
                     <div class="services-types-card-txt">
-                        <h4>Vente et Location de matériel</h4>
+                        <h4>Vente & Location de matériel</h4>
                         <p>Besoin de renouveler ou d'équiper votre entreprise ? Technicien indépendant depuis 2000, je
                             vous
                             conseille en toute objectivité sur le choix de vos photocopieurs et imprimantes
@@ -227,10 +242,9 @@
                         <input type="text" name="company" id="company" placeholder="Nom de l'entreprise / Structure">
                         <select name="request-type" id="request-type" required>
                             <option value="" disabled selected>Sélectionnez le type de demande</option>
-                            <option value="Dépannage d'urgence / Panne">Dépannage d'urgence / Panne</option>
-                            <option value="Maintenance préventive / Entretien">Maintenance préventive / Entretien
-                            </option>
-                            <option value="Projet d'achat ou de location">Projet d'achat ou de location</option>
+                            <option value="Dépannage d'urgence / Panne">Devis Vente & Location</option>
+                            <option value="Maintenance préventive / Entretien">Demander un dépannage</option>
+                            <option value="Projet d'achat ou de location">Occasions disponibles</option>
                             <option value="Autre demande">Autre demande</option>
                         </select>
                         <input type="text" name="subject" id="request-subject" placeholder="Objet de la demande">
