@@ -52,6 +52,7 @@ ol {
 
 html {
     scroll-behavior: smooth;
+    background-color: var(--blue);
 }
 
 .menu-open {
@@ -60,7 +61,6 @@ html {
 
 body {
     font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--white-bg);
 }
 
 h3 {
@@ -173,7 +173,7 @@ body::after {
         justify-content: flex-start;
         gap: 2rem;
         padding-top: 2rem;
-        background-color: rgba(11, 24, 73, 0.95);
+        background-color: var(--blue);
         width: 100%;
         top: 6.031rem;
         left: 100%;
@@ -453,6 +453,7 @@ body::after {
     flex-direction: column;
     align-items: center;
     gap: 3rem;
+    background-color: var(--white-bg);
 }
 
 #about h4 {
@@ -587,6 +588,7 @@ body::after {
     align-items: center;
     padding: 0 3rem 4rem 3rem;
     gap: 2rem;
+    background-color: var(--white-bg);
 }
 
 #customers {
@@ -694,7 +696,6 @@ body::after {
 
 select {
     appearance: none;
-    padding: 8px 32px 8px 12px;
     background-image: url('images/icons/fleche.png');
     background-repeat: no-repeat;
     background-position: right 25px center;
