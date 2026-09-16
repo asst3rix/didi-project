@@ -86,7 +86,7 @@ header {
     background-color: var(--blue);
 }
 
-#title {
+#title img {
     width: clamp(15rem, 30vw, 20rem);
     display: block;
 }
@@ -97,7 +97,7 @@ header,
 }
 
 nav {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1vw, 1.3rem);
 }
 
 #menu {
@@ -111,12 +111,46 @@ nav {
 #menu a {
     text-decoration: none;
     white-space: nowrap;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 #menu a:hover {
     color: var(--yellow);
-    transition: 0.3s;
+    transition: 0.2s;
+}
+
+#phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* To preload the #phone:hover::before icon */
+body::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url('images/icons/telephone-jaune.png');
+}
+
+#phone::before {
+    content: "";
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-image: url('images/icons/telephone-blanc.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.1s;
+}
+
+#phone:hover::before {
+    background-image: url('images/icons/telephone-jaune.png');
+    transition: 0.2s;
 }
 
 #burger-container {
@@ -127,6 +161,10 @@ nav {
     header {
         justify-content: space-between;
         padding-inline: 2rem;
+    }
+
+    nav {
+        font-size: 1.2rem;
     }
 
     #menu {
@@ -180,7 +218,7 @@ nav {
     }
 
     .clicked .line-2 {
-        opacity: 0;
+        background-color: var(--blue);
     }
 
     .clicked .line-3 {
