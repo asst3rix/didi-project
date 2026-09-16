@@ -654,6 +654,19 @@ nav {
     min-width: 0;
 }
 
+select {
+    appearance: none;
+    padding: 8px 32px 8px 12px;
+    background-image: url('images/icons/fleche.png');
+    background-repeat: no-repeat;
+    background-position: right 25px center;
+    background-size: 1rem;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
 select:required:invalid,
 ::placeholder {
     color: var(--grey);
@@ -693,9 +706,9 @@ option {
 #btn-submit-form:hover,
 #btn-submit-form:focus {
     background-color: var(--white);
-    color: var(--blue);
-    border: 1px solid var(--blue);
+    color: var(--yellow);
     transition: 0.3s;
+    cursor: pointer;
 }
 
 @media (width < 1000px) {
