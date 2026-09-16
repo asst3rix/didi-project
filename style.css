@@ -56,7 +56,7 @@ html {
 
 html,
 header {
-    background-color: var(--blue) !important;
+    background-color: var(--blue);
 }
 
 .menu-open {
