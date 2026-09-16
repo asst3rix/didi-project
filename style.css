@@ -55,13 +55,17 @@ html {
     background-color: var(--blue);
 }
 
+html,
+header {
+    background-color: var(--blue) !important;
+}
+
 .menu-open {
     overflow: hidden;
 }
 
 body {
     font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--blue);
 }
 
 h3 {
@@ -84,7 +88,6 @@ header {
     justify-content: space-around;
     align-items: center;
     padding-block: 1.3rem;
-    background-color: var(--blue);
 }
 
 #title img {
